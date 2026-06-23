@@ -324,7 +324,7 @@
         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 60 60\'%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'30\' fill=\'%23339972\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' text-anchor=\'middle\' fill=\'white\' font-size=\'20\'%3ES%3C/text%3E%3C/svg%3E'"
         onclick="openTop5()">
       <div class="header-info">
-        <div id="shop-name-display" onclick="openTop5()">SOUDSADA SHOP</div>
+        <div id="shop-name-display" onclick="openTop5()">SAOAUP SHOP</div>
         <div id="live-clock"></div>
       </div>
 
@@ -549,14 +549,14 @@
     <div class="settings-section">
       <h4>🏪 ຂໍ້ມູນຮ້ານ</h4>
       <img id="settings-logo-preview" src="https://i.postimg.cc/d322Q33X/LOGO.jpg" class="logo-preview">
-      <div class="set-row"><label>ຊື່ຮ້ານ</label><input type="text" id="set-shopname" value="SOUDSADA SHOP"></div>
+      <div class="set-row"><label>ຊື່ຮ້ານ</label><input type="text" id="set-shopname" value="SAOAUP SHOP"></div>
       <div class="set-row"><label>Link ໂລໂກ້</label><input type="url" id="set-logo" value="https://i.postimg.cc/d322Q33X/LOGO.jpg"></div>
       <button class="btn btn-gray" style="width:auto;padding:7px 12px;font-size:12px;margin-bottom:8px" onclick="previewSettingsLogo()">👁️ ເບິ່ງ</button>
     </div>
     <div class="settings-section">
       <h4>📢 ຕັ້ງຄ່າ Banner & Ticker</h4>
       <label style="font-size:11px;color:var(--primary);font-weight:700;display:block;margin-bottom:5px;">📝 ຂໍ້ຄວາມ Ticker</label>
-      <textarea id="set-ticker-text" rows="3" style="width:100%;padding:8px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:12px;background:var(--input-bg);color:var(--text);resize:vertical;" placeholder="ຕຍ: 🔥 Soudsada Shop · ສິນຄ້າຂາຍດີ 🛒"></textarea>
+      <textarea id="set-ticker-text" rows="3" style="width:100%;padding:8px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:12px;background:var(--input-bg);color:var(--text);resize:vertical;" placeholder="ຕຍ: 🔥 SAOAUP SHOP · ສິນຄ້າຂາຍດີ 🛒"></textarea>
       <div style="display:flex;gap:6px;margin-top:8px">
         <button class="btn btn-gray" style="flex:1;padding:8px;font-size:12px" onclick="loadBannerSettingsFromAPI()">🔄 ໂຫຼດ</button>
         <button class="btn" style="flex:1;padding:8px;font-size:12px" onclick="saveBannerSettingsToAPI()">💾 ບັນທຶກ Ticker</button>
@@ -813,7 +813,7 @@ function renderTicker(customText, top10Data) {
   if (top10Data && top10Data.length > 0) {
     top10Names = " · " + top10Data.map((item, i) => `${i+1}. ${item.name}`).join(" · ");
   }
-  const baseText = customText || "🔥 Soudsada Shop · ສິນຄ້າຂາຍດີປະຈຳອາທິດ";
+  const baseText = customText || "🔥 SAOAUP SHOP · ສິນຄ້າຂາຍດີປະຈຳອາທິດ";
   let content = "";
   for (let i = 0; i < 2; i++) {
     content += `<span class="ticker-text">${baseText}${top10Names} <span class="ticker-sep">|</span> <span class="ticker-clock" id="ticker-clock-${i}">--:--:--</span></span>`;
@@ -845,7 +845,7 @@ async function loadBannerSettingsFromAPI() {
     if (el) el.value = txt;
     _savedTickerText = txt;
   } catch (e) {
-    _savedTickerText = "🔥 Soudsada Shop · ສິນຄ້າຂາຍດີປະຈຳອາທິດ";
+    _savedTickerText = "🔥 SAOAUP SHOP · ສິນຄ້າຂາຍດີປະຈຳອາທິດ";
   }
 }
 
